@@ -1,0 +1,16 @@
+<header>
+  <h1>Users#index</h1>
+</header>
+
+<h2>ユーザー一覧</h2>
+
+<% @users.each do |user| %>
+  <p><%= user.name %></p>
+  <p><%= user.age %></p>
+  <%= link_to "表示する", user_path(user.id) %>
+  <%= link_to "編集する", edit_user_path(user.id) %>
+  <%= link_to "削除する", user_path(user.id), method: :delete %>
+
+<% end %>
+
+<p><%= link_to "新規登録", new_user_path %></p>

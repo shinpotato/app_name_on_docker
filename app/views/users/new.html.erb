@@ -1,0 +1,11 @@
+<header>
+  <h1>Users#new</h1>
+</header>
+
+<%= form_for @user, method: :post do |f| %>
+
+  <p>名前：<%= f.text_field :name %></p>
+  <p>年齢：<%= f.text_field :age %></p>
+  <%= f.submit "送信" %>
+  
+<% end %>
